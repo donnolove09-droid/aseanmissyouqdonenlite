@@ -1,0 +1,21 @@
+# yaml.render
+# Template cấu hình / render kết quả (tham khảo)
+
+bot:
+  name: "LQ Check Bot"
+  version: "1.0"
+  description: "Bot check tài khoản Liên Quân Mobile (Garena)"
+
+commands:
+  checklq:
+    description: "Check tài khoản Liên Quân"
+    usage: "/checklq tài_khoản-mật_khẩu"
+    example: "/checklq user123-pass456"
+    timeout: 45
+
+settings:
+  max_threads: 3
+  enable_proxy: true
+  proxy_file: "proxy.txt"
+  save_hits: true
+  hits_folder: "hits/"

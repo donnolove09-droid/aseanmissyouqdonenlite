@@ -1,0 +1,13 @@
+# requirements.txt
+python-telegram-bot>=21.0
+requests>=2.31.0
+Pillow>=10.0.0
+pyyaml>=6.0
+colorama
+pystyle
+flask
+
+# Tùy chọn (captcha)
+# opencv-python-headless
+# ddddocr
+# numpy

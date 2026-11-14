@@ -1,0 +1,29 @@
+# render.yaml
+# Deploy bot + web admin lên Render
+
+services:
+  # Bot Telegram
+  - type: worker
+    name: asean-missyou-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot_telegram.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_WEB_URL
+        value: https://asean-missyou-admin.onrender.com/hit
+      - key: PYTHON_VERSION
+        value: "3.11"
+
+  # Web Admin
+  - type: web
+    name: asean-missyou-admin
+    runtime: python
+    plan: free
+    buildCommand: pip install flask
+    startCommand: python admin_web.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"

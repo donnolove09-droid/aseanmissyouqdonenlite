@@ -1,0 +1,43 @@
+# request.txt
+# Hướng dẫn sử dụng Bot Check Liên Quân
+
+=== LỆNH ===
+
+/checklq tài_khoản-mật_khẩu
+Ví dụ: /checklq tommy199999999-quang098
+
+/start
+/help
+
+=== KẾT QUẢ ===
+
+HIT:
+- Acc / Pass
+- UID, Nickname, Tên LQ
+- Quốc gia
+- SĐT / Mail / Facebook / 2FA / Ban
+- Shells (sò)
+- Số skin + danh sách SS / SSS
+- Tình trạng acc
+
+INVALID / ERROR / TIMEOUT / CAPTCHA / PROXY_FAIL / PORT_BLOCKED
+
+=== CHẠY LOCAL ===
+
+1. Lấy token từ @BotFather
+2. Sửa TOKEN trong bot_telegram.py hoặc:
+   export TELEGRAM_BOT_TOKEN="your_token"
+3. pip install -r requirements.txt
+4. python bot_telegram.py
+
+=== DEPLOY RENDER ===
+
+Dùng file render.yaml
+Nhớ set TELEGRAM_BOT_TOKEN trong Environment Variables
+
+=== GHI CHÚ ===
+
+- File goc.py đã được tích hợp sẵn logic check
+- Acc HIT tự lưu vào thư mục hits/
+- Nên dùng proxy nếu bị chặn port 19000
+- Không spam lệnh
